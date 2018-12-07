@@ -1,25 +1,25 @@
 {
     "bindings": [
-      {
-        "type": "timerTrigger",
-        "name": "myTimer",
-        "schedule": "0 24 6 * * 1,3,5",
-        "direction": "in"
-      },
-      {
-        "type": "blob",
-        "name": "inBlob",
-        "path": "sendblogtwitter/posts.json",
-        "connection": "blogarchivetweeter_STORAGE",
-        "direction": "in"
-      },
-      {
-        "type": "blob",
-        "name": "outBlob",
-        "path": "sendblogtwitter/posts.json",
-        "connection": "blogarchivetweeter_STORAGE",
-        "direction": "out"
-      }
+        {
+            "type": "timerTrigger",
+            "name": "myTimer",
+            "schedule": "0 24 6 * * 1,3,5",
+            "direction": "in"
+        },
+        {
+            "type": "blob",
+            "name": "inBlob",
+            "path": "sendblogtwitter/posts.json",
+            "connection": "blogarchivetweeter_STORAGE",
+            "direction": "in"
+        },
+        {
+            "type": "blob",
+            "name": "outBlob",
+            "path": "sendblogtwitter/posts.json",
+            "connection": "blogarchivetweeter_STORAGE",
+            "direction": "out"
+        }
     ],
     "disabled": false
-  }
+}
