@@ -6,6 +6,7 @@ $region               = '<AZURE-REGION>'
 $storageAcct          = '<STORAGE-ACCOUNT-NAME>'
 $storageContainerName = '<STORAGE-CONTAINER-NAME>'
 $functionApp          = '<FUNCTION-APP-NAME>'
+$blogFeedUrl          = '<YOUR-FEED-URL'
 $twitterAccessSecret  = '<TWITTER-ACCESS-SECRET>'
 $twitterAccessToken   = '<TWITTER-ACCESS-TOKEN>'
 $twitterConsumerKey   = '<TWITTER-CONSUMER-KEY>'
@@ -28,6 +29,7 @@ az storage blob upload --account-name $storageAcct --container-name $storageCont
 # Create a v1 Function app so we can use PowerShell and define settings
 az functionapp create --resource-group $resourceGroup --name $functionApp --storage-account $storageAcct --consumption-plan-location $region
 az functionapp config appsettings set --resource-group $resourceGroup --name $functionApp --settings "FUNCTIONS_EXTENSION_VERSION = ~1"
+az functionapp config appsettings set --resource-group $resourceGroup --name $functionApp --settings "BLOG_FEED_URL = $blogFeedUrl"
 az functionapp config appsettings set --resource-group $resourceGroup --name $functionApp --settings "TWITTER_ACCESS_SECRET = $twitterAccessSecret"
 az functionapp config appsettings set --resource-group $resourceGroup --name $functionApp --settings "TWITTER_ACCESS_TOKEN = $twitterAccessToken"
 az functionapp config appsettings set --resource-group $resourceGroup --name $functionApp --settings "TWITTER_CONSUMER_KEY = $twitterConsumerKey"
